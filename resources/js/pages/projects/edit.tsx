@@ -2,6 +2,7 @@ import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
 import { Head, usePage } from '@inertiajs/react';
+import { Inertia } from '@inertiajs/react';
 
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -27,7 +28,7 @@ interface Project {
 
 export default function ProjectDetails() {
 
-    const {project} = usePage().props as {project: Project};
+    const { project } = usePage().props as unknown as { project: Project };
 
 
 
